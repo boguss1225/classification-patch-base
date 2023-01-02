@@ -9,7 +9,7 @@ channels = 3
 model_save_name = "TestNet"
 model_dir = "trained_models/IMAS_Salmon/"+model_save_name+"/" # = save_dir
 
-dir_base = "/home/mirap/0_DATABASE/IMAS_Salmon/6_Salmon_Yolo_Balanced/"
+dir_base = "/home/mirap/0_DATABASE/ivy_coverage/cropped/"
 train_dir = dir_base + "set1"
 valid_dir = dir_base + "5_folds/1fold"
 test_dir = dir_base + "test"
