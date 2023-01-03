@@ -1,6 +1,8 @@
 # classification-patch-base-system
 
 ## Introduction
+![picutre](https://github.com/boguss1225/classification-patch-base/blob/main/screenshot/result_overview1.png)
+
 Machine learning has been very successfull for many years. It could have successfully solved many challanges such as detection of tumors from brain image [1], segmentation of problematic area [2], and classification of certain image [3]. However, supervised learning methodology has a fundamental limitation due to its dependancy to the given label [4]. Since the learning is based on the given label, it is even more serious especially when the label is ambiguous [5]. However, it is hard to blame the label itself because, in many cases, it is very difficult to provide clear label due to the feature of given image data. Here are the challenge I prepared:
 
 ## Challenge
@@ -47,11 +49,10 @@ As you can see. It's hard to decide...
 So, I will let these be decided by algorithm by voting from inside of the patches!
 To lower the work overload, this vote will happens only when the classification confidence of the patch is lower than a certain thresh hold
 
-## Voting system 
-(TO BE DESCRIBED)
 
 ## Test Result
 * Data overview
+![picutre](https://github.com/boguss1225/classification-patch-base/blob/main/screenshot/results_list.png)
 
 ## Conclusion
 This would be useful when you want...
