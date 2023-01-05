@@ -4,6 +4,7 @@ import tensorflow as tf
 from tensorflow import keras
 from tensorflow.keras import layers
 import pandas as pd
+import matplotlib.pyplot as plt
 import config
 
 LOAD_WEIGHTS = False
@@ -89,7 +90,8 @@ def make_model(input_shape, num_classes):
     return keras.Model(inputs, outputs)
 
 
-model = make_model(input_shape=image_size + (3,), num_classes=config.NUM_CLASSES)
+model = make_model(input_shape=image_size + (3,), num_classes=2)
+keras.utils.plot_model(model, show_shapes=True)
 
 
 # CALLBACKS
@@ -117,21 +119,15 @@ callbacks = [
 
 
 # TRAIN MODEL
-epochs = config.EPOCHS
-
-if config.NUM_CLASSES == 2 :
-    loss = "binary_crossentropy"
-else :
-    loss = "sparse_categorical_crossentropy"
+epochs = 10
 
 model.compile(
     optimizer=keras.optimizers.Adam(1e-3),
-    loss=loss,
+    loss="binary_crossentropy",
     metrics=["accuracy", # add more metrics if you want
-#              tf.keras.metrics.AUC(), # only available for binary classification
-#              tf.keras.metrics.Precision(), # only available for binary classification
-#              tf.keras.metrics.Recall() # only available for binary classification
-             ]
+             tf.keras.metrics.AUC(),
+             tf.keras.metrics.Precision(),
+             tf.keras.metrics.Recall()],
 )
 
 # if you want to load weight
@@ -168,8 +164,5 @@ else :
     img_array = tf.expand_dims(img_array, 0)  # Create batch axis
 
     predictions = model.predict(img_array)
-    if config.NUM_CLASSES == 2 :
-        score = float(predictions[0])
-        print(f"[{config.test_image_path}] is {100 * (1 - score):.2f}% bg and {100 * score:.2f}% ivy.")
-    else :
-        # TO_DO
+    score = float(predictions[0])
+    print(f"[{config.test_image_path}] is {100 * (1 - score):.2f}% bg and {100 * score:.2f}% ivy.")
