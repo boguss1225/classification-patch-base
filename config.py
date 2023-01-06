@@ -1,16 +1,16 @@
 # some training parameters
-EPOCHS = 1
-BATCH_SIZE = 16
-NUM_CLASSES = 3
-image_height = 128
-image_width = 128
+EPOCHS = 100
+BATCH_SIZE = 4
+NUM_CLASSES = 5
+image_height = 224
+image_width = 224
 channels = 3
 
-model_save_name = "TestNet"
-model_dir = "trained_models/ivy_coverage/"+model_save_name+"/" # = save_dir
+model_save_name = "EfficientNetV2B0"
+model_dir = "../tf2_image_classification/trained_models/IMAS_Salmon/"+model_save_name+"/" # = save_dir
 
-dir_base = "/home/mirap/0_DATABASE/ivy_coverage/cropped/"
+dir_base = "/home/mirap/0_DATABASE/IMAS_Salmon/6_Salmon_Yolo_Balanced/"
 train_dir = dir_base + "set1"
 valid_dir = dir_base + "5_folds/1fold"
 test_dir = dir_base + "test"
-test_image_path = dir_base + "test/ivy/resultsivy_006_2112.jpg"
+test_image_path = dir_base + "test/4/untitled-34_2693_1319_4.jpg"
