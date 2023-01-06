@@ -8,7 +8,7 @@ def get_datasets():
         horizontal_flip=True,
         vertical_flip=True,
         brightness_range = (0.7,1.3),
-        rotation_range = 90
+        # rotation_range = 90
         # rescale=1.0 / 255.0
     )
 

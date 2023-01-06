@@ -1,13 +1,13 @@
 # some training parameters
-EPOCHS = 100
-BATCH_SIZE = 4
+EPOCHS = 1000
+BATCH_SIZE = 128
 NUM_CLASSES = 5
-image_height = 224
-image_width = 224
+image_height = 125
+image_width = 125
 channels = 3
 
 model_save_name = "EfficientNetV2B0"
-model_dir = "../tf2_image_classification/trained_models/IMAS_Salmon/"+model_save_name+"/" # = save_dir
+model_dir = "trained_models/IMAS_Salmon/"+model_save_name+"/" # = save_dir
 
 dir_base = "/home/mirap/0_DATABASE/IMAS_Salmon/6_Salmon_Yolo_Balanced/"
 train_dir = dir_base + "set1"
