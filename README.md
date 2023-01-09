@@ -84,8 +84,8 @@ This would be useful when you want...
 
 ## REFERENCE
 [0] Keras docs : https://keras.io/examples/vision/image_classification_from_scratch/  </br>
-[1] </br>
-[2] </br>
-[3] </br>
-[4] </br>
-[5] </br>
+[1] Zhao, X., Wu, Y., Song, G., Li, Z., Zhang, Y., & Fan, Y. (2018). A deep learning model integrating FCNNs and CRFs for brain tumor segmentation. Medical image analysis, 43, 98-111.</br>
+[2] Yoon, H., Park, M., Yeom, S., Kirkcaldie, M. T., Summons, P., & Lee, S. H. (2021). Automatic detection of amyloid beta plaques in somatosensory cortex of an Alzheimer’s disease mouse using deep learning. IEEE Access, 9, 161926-161936.</br>
+[3] Loussaief, S., & Abdelkrim, A. (2016, December). Machine learning framework for image classification. In 2016 7th International Conference on Sciences of Electronics, Technologies of Information and Telecommunications (SETIT) (pp. 58-61). IEEE</br>
+[4] Wang, J., Yang, Y., Mao, J., Huang, Z., Huang, C., & Xu, W. (2016). Cnn-rnn: A unified framework for multi-label image classification. In Proceedings of the IEEE conference on computer vision and pattern recognition (pp. 2285-2294).</br>
+[5] Schmarje, L., Grossmann, V., Zelenka, C., Dippel, S., Kiko, R., Oszust, M., ... & Koch, R. (2022). Is one annotation enough? A data-centric image classification benchmark for noisy and ambiguous label estimation. arXiv preprint arXiv:2207.06214.</br>
