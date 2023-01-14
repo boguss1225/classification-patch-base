@@ -82,6 +82,10 @@ This would be useful when you want...
 ## DATA AVAILABILITY
 * Vegetation image data will be available upon request (email me : jcjc7890@gmai.com)
 
+## RELATED PROJECT
+Beggiatoa coverage estimation based on patch-base classification. </br>
+https://github.com/boguss1225/beggiatoa_coverage_estimation
+
 ## REFERENCE
 [0] Keras docs : https://keras.io/examples/vision/image_classification_from_scratch/  </br>
 [1] Zhao, X., Wu, Y., Song, G., Li, Z., Zhang, Y., & Fan, Y. (2018). A deep learning model integrating FCNNs and CRFs for brain tumor segmentation. Medical image analysis, 43, 98-111.</br>
