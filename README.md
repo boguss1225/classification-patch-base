@@ -22,38 +22,6 @@ So I made label like below ↓↓↓
 <p align="justify"> Automatic calculation of the coverage of vegetation by classifying every patch from the given image! you can adjust patch size to allow classification model to perform more detailed manner </p>
 The final outcome will be articulated in below ↓↓↓
 
-## ANOTHER CHALLANGE
-To provide training dataset for classification algorithm, you must decide vegetation and non-vegetation(wall) from cropped images. Let's see some of the cropped images. \
-![picutre](screenshot/type1.png) \
-⬆ This picture looks obvious. ⬆ \
-These cropped patches are defintely **'vegetation'**. \
-\
-![picutre](screenshot/background.png) \
-⬆ Also, these examples are obviously in the **'wall'** group. ⬆ \
-\
-![picutre](screenshot/type2.png) \
-⬆ What about these? ⬆ \
-Eventhough it looks bit 'less vegie', it is still agreeable to be **'vegetation'** group \
-\
-![picutre](screenshot/type3.png) \
-⬆ Then what about these? ⬆ \
-Will you put these in the **'vegetation'** group? or **'wall'** group? \
-Here is the dilemma. If you include these to 'vegetation' group, the model will learn **'wall'** pixels data as well.\
-However, if you include these to **'wall'** group, the opposite thing will happen. \
-\
-![picutre](screenshot/type4.png) \
-⬆ Now, What about these? ⬆ \ 
-Will you put these patches to which group? **Vegetation?** or **Wall?** \
-\
-As you can see. It's hard to decide like when you ... ↓
-![picutre](screenshot/meme.png) </br>
-</br>
-
-<!--
-So, I will let these be decided by algorithm by voting from inside of the patches!
-To lower the work overload, this vote will happens only when the classification confidence of the patch is lower than a certain thresh hold
--->
-
 ## DATA OVERVIEW
 
 ![picutre](screenshot/dataset_overview.png) </br>
@@ -82,9 +50,41 @@ This would be useful when you want...
 ## DATA AVAILABILITY
 * Vegetation image data will be available upon request (email me : jcjc7890@gmai.com)
 
+## ANOTHER CHALLANGE
+To provide training dataset for classification algorithm, you must decide vegetation and non-vegetation(wall) from cropped images. Let's see some of the cropped images. \
+![picutre](screenshot/type1.png) \
+⬆ This picture looks obvious. ⬆ \
+These cropped patches are defintely **'vegetation'**. \
+\
+![picutre](screenshot/background.png) \
+⬆ Also, these examples are obviously in the **'wall'** group. ⬆ \
+\
+![picutre](screenshot/type2.png) \
+⬆ What about these? ⬆ \
+Eventhough it looks bit 'less vegie', it is still agreeable to be **'vegetation'** group \
+\
+![picutre](screenshot/type3.png) \
+⬆ Then what about these? ⬆ \
+Will you put these in the **'vegetation'** group? or **'wall'** group? \
+Here is the dilemma. If you include these to 'vegetation' group, the model will learn **'wall'** pixels data as well.\
+However, if you include these to **'wall'** group, the opposite thing will happen. \
+\
+![picutre](screenshot/type4.png) \
+⬆ Now, What about these? ⬆ \ 
+Will you put these patches to which group? **Vegetation?** or **Wall?** \
+\
+As you can see. It's hard to decide like when you ... ↓
+![picutre](screenshot/meme.png) </br>
+</br>
+
+So, I will let this be decided by algorithm by voting from inside of the patches!
+To lower the work overload, this vote will happens only when the classification confidence of the patch is lower than a certain thresh hold.
+Interested? Have a look at this [repo - context weighted segmentation](https://github.com/boguss1225/context-weighted-segmentation)
+
 ## RELATED PROJECT
 Beggiatoa coverage estimation based on patch-base classification. </br>
-https://github.com/boguss1225/beggiatoa_coverage_estimation
+https://github.com/boguss1225/beggiatoa_coverage_estimation </br>
+https://github.com/boguss1225/context-weighted-segmentation </br>
 
 ## REFERENCE
 [0] Keras docs : https://keras.io/examples/vision/image_classification_from_scratch/  </br>
