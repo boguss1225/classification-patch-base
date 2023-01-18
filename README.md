@@ -50,7 +50,7 @@ This would be useful when you want...
 ## DATA AVAILABILITY
 * Vegetation image data will be available upon request (email me : jcjc7890@gmai.com)
 
-## ANOTHER CHALLANGE
+## ANOTHER CHALLANGE & FUTURE WORK
 To provide training dataset for classification algorithm, you must decide vegetation and non-vegetation(wall) from cropped images. Let's see some of the cropped images. \
 ![picutre](screenshot/type1.png) \
 ⬆ This picture looks obvious. ⬆ \
