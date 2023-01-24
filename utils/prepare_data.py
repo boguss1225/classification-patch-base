@@ -41,7 +41,7 @@ def get_datasets():
                                                       color_mode="rgb",
                                                       batch_size=config.BATCH_SIZE,
                                                       seed=7,
-                                                      shuffle=True,
+                                                      shuffle=False,
                                                       class_mode="categorical"
                                                       )
 
