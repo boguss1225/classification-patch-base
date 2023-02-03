@@ -3,7 +3,7 @@
 ## INTRODUCTION
 ![picutre](screenshot/result_overview1.png)
 
-Machine learning has been very successfull for many years. It could have successfully solved many challanges such as detection of tumors from brain image [1], segmentation of problematic area [2], and classification of certain image [3]. However, supervised learning methodology has a fundamental limitation due to its dependancy to the given label [4]. Since the learning is based on the given label, it is even more serious especially when the label is ambiguous [5]. However, it is hard to blame the label itself because, in many cases, it is very difficult to provide clear label due to the feature of given image data. Here are the challenge I prepared:
+<p align='justify'> Machine learning has been very successfull for many years. It could have successfully solved many challanges such as detection of tumors from brain image [1], segmentation of problematic area [2], and classification of certain image [3]. However, supervised learning methodology has a fundamental limitation due to its dependancy to the given label [4]. Since the learning is based on the given label, it is even more serious especially when the label is ambiguous [5]. However, it is hard to blame the label itself because, in many cases, it is very difficult to provide clear label due to the feature of given image data. Here are the challenge I prepared: </p>
 
 ## CHALLANGE
 
@@ -12,8 +12,9 @@ I have a wooden fence with full of climbing plants in my house. \
 I want to quantitate the coverage of the vegetation. \
 So I made label like below ↓↓↓
 
-![picutre](screenshot/lable_img.png) \
-**However**, the label (green mask) includes the wall area as well which is not desirable because the wall area is obviously non-vegetation. If the wall area is included in the training, the model will learn the false information and the consequence will be not welcomed. But it also takes considerably extensive amount of time and labour to annotate only vegetation avoiding all the wall area. Therefore, it is generally very hard to expect to get 100% decent label data with finely carved every single edge. This happens a lot especially when you collaborate with other data providers. So I believe this must be overcome by the power of algorithm. To break this challange, here I implemented ambiguous data-resistant patch-based classification:
+![picutre](screenshot/lable_img.png) 
+
+<p align='justify'> However, the label (green mask) includes the wall area as well which is not desirable because the wall area is obviously non-vegetation. If the wall area is included in the training, the model will learn the false information and the consequence will be not welcomed. But it also takes considerably extensive amount of time and labour to annotate only vegetation avoiding all the wall area. Therefore, it is generally very hard to expect to get 100% decent label data with finely carved every single edge. This happens a lot especially when you collaborate with other data providers. So I believe this must be overcome by the power of algorithm. To break this challange, here I implemented ambiguous data-resistant patch-based classification: </p>
 
 ## OVERVIEW of the algorithm
 ![#c5f015](https://placehold.co/15x15/c5f015/c5f015.png) `Green Patch = Vegetation` \
