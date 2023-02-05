@@ -2,8 +2,8 @@
 EPOCHS = 1000
 BATCH_SIZE = 128
 NUM_CLASSES = 5
-image_height = 125
-image_width = 125
+image_height = 45
+image_width = 45
 channels = 3
 
 model_save_name = "EfficientNetV2B0"

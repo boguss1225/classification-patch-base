@@ -2,6 +2,7 @@ import tensorflow as tf
 import config
 import numpy as np
 import os
+import cv2
 
 def test_single_image(img_dir, model):
     img_raw = tf.io.read_file(img_dir)
@@ -19,6 +20,17 @@ def test_single_image(img_dir, model):
 
     return classification
 
+
+def test_single_image_cv(im, model):
+    im = cv2.resize(im, [config.image_height, config.image_width])
+    img_tensor = tf.convert_to_tensor(im, dtype=tf.float32)
+    img_tensor = tf.expand_dims(img_tensor , 0)
+    # img_tensor = img_tensor / 255.0 # uncomment if model included rescale preprocessing layer
+    prob = model(img_tensor)
+    
+    classification = np.argmax(prob)
+
+    return classification, prob
 
 if __name__ == '__main__':
     model = tf.keras.models.load_model(config.model_dir+config.model_save_name+".h5")
